@@ -1,0 +1,218 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+from docxtpl import DocxTemplate
+
+######################## СГЕНЕРИРОВАНО АВТОМАТИЧЕСКИ, НАДО РАЗОБРАТЬСЯ В КАЖДОЙ СТРОЧКЕ ########################
+########################                  ПОЧЕМУ-ТО КЛАСС БЕЗ КОНСТРУКТОРА              ########################
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        self.template = 'Birthday.docx'
+
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+
+        self.labelStart = QtWidgets.QLabel(self.centralwidget)  # надпись "выберите тип документа"
+        self.labelStart.setGeometry(QtCore.QRect(224, 70, 271, 91))
+        font14 = QtGui.QFont()
+        font14.setPointSize(14)
+        self.labelStart.setFont(font14)
+        self.labelStart.setObjectName("labelStart")
+
+        self.label = QtWidgets.QLabel(self.centralwidget)    # надпись "введите имя работника"
+        self.label.setGeometry(QtCore.QRect(60, 60, 331, 71))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit.setGeometry(QtCore.QRect(390, 80, 301, 41))
+        self.textEdit.setObjectName("textEdit")
+
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(60, 150, 331, 71))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.textEdit_2 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit_2.setGeometry(QtCore.QRect(390, 170, 301, 41))
+        self.textEdit_2.setObjectName("textEdit_2")
+
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(60, 230, 331, 71))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.textEdit_3 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit_3.setGeometry(QtCore.QRect(390, 250, 301, 41))
+        self.textEdit_3.setObjectName("textEdit_3")
+
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(60, 320, 331, 71))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_4.setFont(font)
+        self.label_4.setObjectName("label_4")
+        self.textEdit_4 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit_4.setGeometry(QtCore.QRect(390, 340, 301, 41))
+        self.textEdit_4.setObjectName("textEdit_4")
+
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(60, 400, 331, 71))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.textEdit_5 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit_5.setGeometry(QtCore.QRect(390, 420, 301, 41))
+        self.textEdit_5.setObjectName("textEdit_5")
+
+        self.label_6 = QtWidgets.QLabel(self.centralwidget)
+        self.label_6.setGeometry(QtCore.QRect(60, 230, 331, 71))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_6.setFont(font)
+        self.label_6.setObjectName("label_6")
+        self.textEdit_6 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit_6.setGeometry(QtCore.QRect(390, 250, 301, 41))
+        self.textEdit_6.setObjectName("textEdit_6")
+
+
+        self.btn1 = QtWidgets.QPushButton(self.centralwidget)  # первая кнопка, "день рождения"
+        self.btn1.setGeometry(QtCore.QRect(260, 160, 201, 51))
+        self.btn1.setObjectName("pushButton")
+        self.btn1.clicked.connect(self.choice1)
+
+        self.btn2 = QtWidgets.QPushButton(self.centralwidget)  # вторая кнопка, "запрос"
+        self.btn2.setGeometry(QtCore.QRect(260, 230, 201, 51))
+        self.btn2.setObjectName("pushButton_2")
+        self.btn2.clicked.connect(self.choice2)
+
+
+        self.btn3 = QtWidgets.QPushButton(self.centralwidget)  # третья кнопка, "справка с места работы"
+        self.btn3.setGeometry(QtCore.QRect(260, 300, 201, 51))
+        self.btn3.setObjectName("pushButton_3")
+        self.btn3.clicked.connect(self.choice3)
+
+        self.btn4 = QtWidgets.QPushButton(self.centralwidget)  # кнопка "создать документ"
+        self.btn4.setGeometry(QtCore.QRect(340, 480, 111, 41))
+        self.btn4.setObjectName("pushButton_4")
+        self.btn4.clicked.connect(self.create)
+
+
+        MainWindow.setCentralWidget(self.centralwidget)  # ???
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.label.hide()
+        self.label_2.hide()
+        self.label_3.hide()
+        self.label_4.hide()
+        self.label_5.hide()
+        self.label_6.hide()
+        self.textEdit.hide()
+        self.textEdit_2.hide()
+        self.textEdit_3.hide()
+        self.textEdit_4.hide()
+        self.textEdit_5.hide()
+        self.textEdit_6.hide()
+        self.btn4.hide()
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.labelStart.setText(_translate("MainWindow", "Выберите тип документа"))
+        self.label.setText(_translate("MainWindow", "Укажите название итогового документа:"))
+        self.label_2.setText(_translate("MainWindow", "Укажите название отдела:"))
+        self.label_3.setText(_translate("MainWindow", "Укажите имя сотрудника:"))
+        self.label_4.setText(_translate("MainWindow", "Укажите имя начальника отдела:"))
+        self.label_5.setText(_translate("MainWindow", "Укажите название целевого отдела:"))
+        self.label_6.setText(_translate("MainWindow", "Укажите необходимые комплектующие"))
+        self.btn1.setText(_translate("MainWindow", "Поздравление с днем рождения"))
+        self.btn2.setText(_translate("MainWindow", "Справка с места работы"))
+        self.btn3.setText(_translate("MainWindow", "Запрос на комплектующие"))
+        self.btn4.setText(_translate("MainWindow", "Создать"))
+
+    ########################                     АДСКИЙ КОСТЫЛЬ, ПЕРЕДЕЛАТЬ                  ########################
+    def choice1(self, MainWindow):  # выбран вариант 1
+        self.btn1.hide()
+        self.btn2.hide()
+        self.btn3.hide()
+        self.btn4.show()
+        self.labelStart.hide()
+        self.label.show()
+        self.label_2.show()
+        self.label_3.show()
+        self.label_4.show()
+        self.textEdit.show()
+        self.textEdit_2.show()
+        self.textEdit_3.show()
+        self.textEdit_4.show()
+
+    def choice2(self, MainWindow):  # выбран вариант 2
+        self.template = 'Workplace.docx'
+        self.btn1.hide()
+        self.btn2.hide()
+        self.btn3.hide()
+        self.btn4.show()
+        self.labelStart.hide()
+        self.label.show()
+        self.label_2.show()
+        self.label_3.show()
+        self.label_4.show()
+        self.label_5.show()
+        self.textEdit.show()
+        self.textEdit_2.show()
+        self.textEdit_3.show()
+        self.textEdit_4.show()
+        self.textEdit_5.show()
+
+    def choice3(self, MainWindow):  # выбран вариант 3
+        self.template = 'Request.docx'
+        self.btn1.hide()
+        self.btn2.hide()
+        self.btn3.hide()
+        self.btn4.show()
+        self.labelStart.hide()
+        self.label.show()
+        self.label_2.show()
+        self.label_6.show()
+        self.label_4.show()
+        self.textEdit.show()
+        self.textEdit_2.show()
+        self.textEdit_6.show()
+        self.textEdit_4.show()
+
+    def create(self, MainWindow):
+        self.docName = self.textEdit.toPlainText()
+        self.deptName = self.textEdit_2.toPlainText()
+        self.employeeName = self.textEdit_3.toPlainText()
+        self.headName = self.textEdit_4.toPlainText()
+        self.supplyName = self.textEdit_5.toPlainText()
+        self.supplyList = self.textEdit_6.toPlainText()
+        self.doc = DocxTemplate(self.template)
+        self.context = {'deptName': self.deptName, 'supplyName': self.supplyName,
+                        'supplyList': self.supplyList, 'headName': self.headName,
+                        'enployeeName': self.employeeName}
+        self.doc.render(self.context)
+        self.doc.save(self.docName + '.docx')
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
